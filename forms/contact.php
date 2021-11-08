@@ -45,12 +45,12 @@ try {
   //Server settings
   $mail->SMTPDebug = 0;                      //Enable verbose debug output
   $mail->isSMTP();                                            //Send using SMTP
-  $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+  $mail->Host       = 'x8autxobia7sgh74.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';                     //Set the SMTP server to send through
   $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-  $mail->Username   = 'shemarodriguez1406@gmail.com';                     //SMTP username
-  $mail->Password   = 'tambo1406';                               //SMTP password
+  $mail->Username   = 'aee5zs2598t3sjff';                     //SMTP username
+  $mail->Password   = 'qrm3fgz0lgelgetc';                               //SMTP password
   $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
-  $mail->Port       = 587;                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+  $mail->Port       = 3306;                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
   //Recipients
   $mail->setFrom('shemarodriguez1406@gmail.com', 'Curipapus');
