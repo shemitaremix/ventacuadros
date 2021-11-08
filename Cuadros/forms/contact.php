@@ -36,10 +36,10 @@ require("class.phpmailer.php");
 $mail = new PHPMailer();
 $mail->Host = "localhost";
  
-$mail->From = "remite@email.com";
+$mail->From = "shemarodriguez1406@gmail.com";
 $mail->FromName = "Nombre del Remitente";
 $mail->Subject = "Subject del correo";
-$mail->AddAddress("destino1@correo.com","Nombre 01");
+$mail->AddAddress("$correo","$nombre");
 
 
  
