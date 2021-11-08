@@ -1,6 +1,6 @@
 <?php
 require("enlaze.php");
-require 'vendor/autoload.php';
+require ("vendor/composer/autoload.php");
 $nombre= "";
 $correo = "";
 $tema = "";
