@@ -1,5 +1,6 @@
 <?php
 require("enlaze.php");
+require 'vendor/autoload.php';
 $nombre= "";
 $correo = "";
 $tema = "";
@@ -32,7 +33,7 @@ $sql = "INSERT INTO registros (id,nombre,correo,tema,mensaje) VALUES (' ','$nomb
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }*/
 
-require("class.phpmailer.php");
+
 $mail = new PHPMailer();
 $mail->Host = "localhost";
  
