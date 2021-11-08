@@ -53,7 +53,7 @@ try {
 
   //Recipients
   $mail->setFrom('shemarodriguez1406@gmail.com', 'Curipapus');
-  $mail->addAddress('$correo', '$nombre');     //Add a recipient
+  $mail->addAddress("$correo", "$nombre");     //Add a recipient
   
 
   
