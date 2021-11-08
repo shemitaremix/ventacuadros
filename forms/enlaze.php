@@ -1,9 +1,9 @@
 <?php
 
-$servername = "localhost";
-$database = "contacto";
-$username = "root";
-$password = "";
+$servername = "x8autxobia7sgh74.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$database = "h5ynpbhotsrylhx6";
+$username = "aee5zs2598t3sjff";
+$password = "qrm3fgz0lgelgetc";
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
