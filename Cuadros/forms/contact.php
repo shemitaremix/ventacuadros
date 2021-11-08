@@ -32,4 +32,23 @@ $sql = "INSERT INTO registros (id,nombre,correo,tema,mensaje) VALUES (' ','$nomb
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }*/
 
+require("class.phpmailer.php");
+$mail = new PHPMailer();
+$mail->Host = "localhost";
+ 
+$mail->From = "remite@email.com";
+$mail->FromName = "Nombre del Remitente";
+$mail->Subject = "Subject del correo";
+$mail->AddAddress("destino1@correo.com","Nombre 01");
+
+
+ 
+$body  = "Hola <strong>amigo</strong><br>";
+$body .= "probando <i>PHPMailer<i>.<br><br>";
+$body .= "<font color='red'>Saludos</font>";
+$mail->Body = $body;
+$mail->AltBody = "Hola amigo\nprobando PHPMailer\n\nSaludos";
+
+$mail->Send();
+
 ?>
