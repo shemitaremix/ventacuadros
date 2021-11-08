@@ -50,7 +50,7 @@ try {
   $mail->Username   = 'shemarodriguez1406@gmail.com';                     //SMTP username
   $mail->Password   = 'tambo1406';                               //SMTP password
   $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
-  $mail->Port       = 587;                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+  $mail->Port       = 465;                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
   //Recipients
   $mail->setFrom('shemarodriguez1406@gmail.com', 'Curipapus');
