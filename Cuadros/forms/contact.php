@@ -21,11 +21,11 @@ if(isset($_POST["correo"])){
 
 
 if(isset($_POST["tema"])){
-  $correo = $_POST["tema"];
+  $tema = $_POST["tema"];
 }
 
 if(isset($_POST["mensaje"])){
-  $correo = $_POST["mensaje"];
+  $mensaje = $_POST["mensaje"];
 }
 
 
@@ -39,21 +39,35 @@ $sql = "INSERT INTO registros (id,nombre,correo,tema,mensaje) VALUES (' ','$nomb
 
 
 $mail = new PHPMailer(true);
-$mail->Host = "localhost";
- 
-$mail->From = "shemarodriguez1406@gmail.com";
-$mail->FromName = "Nombre del Remitente";
-$mail->Subject = "Subject del correo";
-$mail->AddAddress("$correo","$nombre");
 
+try {
+  //Server settings
+  $mail->SMTPDebug = 0;                      //Enable verbose debug output
+  $mail->isSMTP();                                            //Send using SMTP
+  $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+  $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+  $mail->Username   = 'shemarodriguez1406@gmail.com';                     //SMTP username
+  $mail->Password   = 'tambo1406';                               //SMTP password
+  $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+  $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
- 
-$body  = "Hola <strong>amigo</strong><br>";
-$body .= "probando <i>PHPMailer<i>.<br><br>";
-$body .= "<font color='red'>Saludos</font>";
-$mail->Body = $body;
-$mail->AltBody = "Hola amigo\nprobando PHPMailer\n\nSaludos";
+  //Recipients
+  $mail->setFrom('shemarodriguez1406@gmail.com', 'Curipapus');
+  $mail->addAddress("$correo", "$nombre");     //Add a recipient
+  
 
-$mail->Send();
+  
+
+  //Content
+  $mail->isHTML(true);                                  //Set email format to HTML
+  $mail->Subject = 'Asunto de suma importancia';
+  $mail->Body    = 'Correo recibido exitosamente';
+  
+
+  $mail->send();
+  echo 'El mensaje se envio correctamente';
+} catch (Exception $e) {
+  echo "Isra la cagaste en algo: {$mail->ErrorInfo}";
+}
 
 ?>
