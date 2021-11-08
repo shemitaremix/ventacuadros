@@ -1,5 +1,10 @@
 <?php
+
 require("enlaze.php");
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require ("vendor/autoload.php");
 $nombre= "";
 $correo = "";
 $tema = "";
@@ -32,14 +37,14 @@ $sql = "INSERT INTO registros (id,nombre,correo,tema,mensaje) VALUES (' ','$nomb
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }*/
 
-require("class.phpmailer.php");
-$mail = new PHPMailer();
+
+$mail = new PHPMailer(true);
 $mail->Host = "localhost";
  
-$mail->From = "remite@email.com";
+$mail->From = "shemarodriguez1406@gmail.com";
 $mail->FromName = "Nombre del Remitente";
 $mail->Subject = "Subject del correo";
-$mail->AddAddress("destino1@correo.com","Nombre 01");
+$mail->AddAddress("$correo","$nombre");
 
 
  
