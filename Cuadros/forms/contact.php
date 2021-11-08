@@ -26,10 +26,10 @@ if(isset($_POST["mensaje"])){
 
 $sql = "INSERT INTO registros (id,nombre,correo,tema,mensaje) VALUES (' ','$nombre','$correo','$tema','$mensaje')";
 
-if(mysqli_query($conn,$sql)){
+/*if(mysqli_query($conn,$sql)){
     echo "new recod created succefuly";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+}*/
 
 ?>
