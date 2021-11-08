@@ -21,11 +21,11 @@ if(isset($_POST["correo"])){
 
 
 if(isset($_POST["tema"])){
-  $correo = $_POST["tema"];
+  $tema = $_POST["tema"];
 }
 
 if(isset($_POST["mensaje"])){
-  $correo = $_POST["mensaje"];
+  $mensaje = $_POST["mensaje"];
 }
 
 
