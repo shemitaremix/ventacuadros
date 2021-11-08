@@ -34,7 +34,7 @@ $sql = "INSERT INTO registros (id,nombre,correo,tema,mensaje) VALUES (' ','$nomb
 }*/
 
 
-$mail = new PHPMailer();
+$mail = new PHPMailer(true);
 $mail->Host = "localhost";
  
 $mail->From = "shemarodriguez1406@gmail.com";
