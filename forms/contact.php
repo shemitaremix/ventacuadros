@@ -47,13 +47,13 @@ try {
   $mail->isSMTP();                                            //Send using SMTP
   $mail->Host       = 'smtp.outlook.com';                     //Set the SMTP server to send through
   $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-  $mail->Username   = '';                     //SMTP username
-  $mail->Password   = 'Tambo2002';                               //SMTP password
+  $mail->Username   = 'isra.repuesto.2021@outlook.com';                     //SMTP username
+  $mail->Password   = '@Isra01@#';                               //SMTP password
   $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
   $mail->Port       = 587;                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
   //Recipients
-  $mail->setFrom('israel_1320114066@uptecamac.edu.mx', 'Curipapus');
+  $mail->setFrom('isra.repuesto.2021@outlook.com', 'Curipapus');
   $mail->addAddress("$correo", "$nombre");     //Add a recipient
   
 
